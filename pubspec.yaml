@@ -7,6 +7,7 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
+  dotted_border: ^3.1.0
   flutter:
     sdk: flutter
   flutter_native_splash: ^2.4.6
@@ -14,6 +15,8 @@ dependencies:
   geocoding: ^4.0.0
   go_router: ^16.2.2
   google_maps_flutter: ^2.13.1
+  image_picker: ^1.2.0
+  pinput: ^5.0.2
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -31,6 +34,7 @@ flutter:
 
   assets:
     - assets/imgs/
+    - assets/images/
     - assets/fonts/
 
   fonts:
