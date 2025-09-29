@@ -1,6 +1,6 @@
-import 'package:delvirick/auth/presentation/widgets/custom_elevated_button.dart';
-import 'package:delvirick/auth/presentation/widgets/custom_text_field.dart';
-import 'package:delvirick/auth/presentation/widgets/top_section_auth_view.dart';
+import 'package:delvirick/core/widgets/custom_elevated_button.dart';
+import 'package:delvirick/core/widgets/custom_text_field.dart';
+import 'package:delvirick/features/auth/presentation/widgets/top_section_auth_view.dart';
 import 'package:delvirick/utils/routes/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -96,7 +96,7 @@ class _LoginViewState extends State<LoginView> {
                               : Color(0xffD1FAE5),
                       onPressed: () {
                         // Our Logic
-                        // GoRouter.of(context).push(Routers.register);
+                        GoRouter.of(context).push(Routers.userInfo);
                       },
                       child: Text('Login'),
                     ),
@@ -135,7 +135,7 @@ class _LoginViewState extends State<LoginView> {
                         (index) => InkWell(
                           onTap: () {
                             // Our Logic
-                            // GoRouter.of(context).push(Routers.register);
+                            GoRouter.of(context).push(Routers.userInfo);
                           },
                           child: Container(
                             width: 56,

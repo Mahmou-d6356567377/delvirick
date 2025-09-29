@@ -1,5 +1,7 @@
-import 'package:delvirick/auth/presentation/views/login_view.dart';
-import 'package:delvirick/auth/presentation/views/register_view.dart';
+import 'package:delvirick/features/auth/presentation/views/login_view.dart';
+import 'package:delvirick/features/auth/presentation/views/register_view.dart';
+import 'package:delvirick/features/userInfo/customerInfo/presentation/views/user_info_view.dart';
+import 'package:delvirick/features/userInfo/customerInfo/presentation/widgets/congrate.dart';
 import 'package:delvirick/view/intro/screens/onboarding.dart';
 import 'package:delvirick/view/intro/screens/users.dart';
 import 'package:go_router/go_router.dart';
@@ -9,6 +11,9 @@ class Routers {
   static const String userscreen = '/userscreen';
   static const String login = '/login';
   static const String register = '/register';
+  static const String userInfo = '/userInfo';
+  static const String congrate = '/congrate';
+
   static const String forgetpasswordscreen = '/forgetpasswordscreen';
   static const String otpscreen = '/otpscreen';
   static const String newpasswordscreen = '/newpasswordscreen';
@@ -35,6 +40,8 @@ class Routers {
       GoRoute(path: userscreen, builder: (context, state) => UsersScreen()),
       GoRoute(path: login, builder: (context, state) => LoginView()),
       GoRoute(path: register, builder: (context, state) => RegisterView()),
+      GoRoute(path: userInfo, builder: (context, state) => UserInfoView()),
+      GoRoute(path: congrate, builder: (context, state) => Congrate()),
     ],
   );
 }

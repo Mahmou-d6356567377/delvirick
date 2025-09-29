@@ -1,15 +1,15 @@
-import 'package:delvirick/auth/presentation/widgets/custom_elevated_button.dart';
-import 'package:delvirick/auth/presentation/widgets/custom_text_field.dart';
+import 'package:delvirick/core/widgets/custom_elevated_button.dart';
+import 'package:delvirick/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class DetailsView extends StatefulWidget {
-  const DetailsView({super.key});
+class UserInfoView extends StatefulWidget {
+  const UserInfoView({super.key});
 
   @override
-  State<DetailsView> createState() => _DetailsViewState();
+  State<UserInfoView> createState() => _UserInfoViewState();
 }
 
-class _DetailsViewState extends State<DetailsView> {
+class _UserInfoViewState extends State<UserInfoView> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   TextEditingController fNController = TextEditingController();
   TextEditingController lNController = TextEditingController();
@@ -34,7 +34,7 @@ class _DetailsViewState extends State<DetailsView> {
                         fit: BoxFit.cover,
                       ),
                     ),
-          
+
                     Positioned(
                       top: 65,
                       left: 25,
@@ -55,7 +55,7 @@ class _DetailsViewState extends State<DetailsView> {
                         icon: Icon(Icons.arrow_back, size: 40),
                       ),
                     ),
-          
+
                     Positioned(
                       top: 128,
                       left: 25,
@@ -68,7 +68,7 @@ class _DetailsViewState extends State<DetailsView> {
                         ),
                       ),
                     ),
-          
+
                     Positioned(
                       top: 230,
                       left: 25,
@@ -85,7 +85,7 @@ class _DetailsViewState extends State<DetailsView> {
                   ],
                 ),
               ),
-          
+
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Column(
@@ -107,7 +107,7 @@ class _DetailsViewState extends State<DetailsView> {
                     CustomElevatedButton(
                       backgroundColor: Color(0xff10B981),
                       onPressed: () {
-                        //Navigate to Home||Location Select
+                        //Navigate to Location
                       },
                       child: Text(
                         'Next',

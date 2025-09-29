@@ -1,9 +1,9 @@
 import 'dart:async';
-
-import 'package:delvirick/auth/presentation/widgets/custom_elevated_button.dart';
-import 'package:delvirick/auth/presentation/widgets/custom_otp_field.dart';
+import 'package:delvirick/core/widgets/custom_elevated_button.dart';
+import 'package:delvirick/features/auth/presentation/widgets/custom_otp_field.dart';
+import 'package:delvirick/utils/routes/go_router.dart';
 import 'package:flutter/material.dart';
-
+import 'package:go_router/go_router.dart';
 
 class VertificationCodeView extends StatefulWidget {
   const VertificationCodeView({super.key});
@@ -127,9 +127,7 @@ class _VertificationCodeViewState extends State<VertificationCodeView> {
               ),
             ),
             OtpTextField(pinController: pinController, isError: false),
-
             SizedBox(height: MediaQuery.of(context).size.height * 0.33),
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 120.0),
               child: CustomElevatedButton(
@@ -160,7 +158,8 @@ class _VertificationCodeViewState extends State<VertificationCodeView> {
                         ? Color(0xff10B981)
                         : Color(0xffD1FAE5),
                 onPressed: () {
-                  pinController.text.length == 4 ? print('44444444') : null;
+                  // Our Logic
+                  GoRouter.of(context).push(Routers.congrate);
                 },
                 child: Text(
                   'Next',

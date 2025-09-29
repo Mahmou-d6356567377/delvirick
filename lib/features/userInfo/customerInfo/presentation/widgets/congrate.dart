@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CongratSuccessCreate extends StatelessWidget {
-  const CongratSuccessCreate({super.key});
+class Congrate extends StatelessWidget {
+  const Congrate({super.key});
 
   @override
   Widget build(BuildContext context) {
