@@ -2,14 +2,14 @@ import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class UserInfoView extends StatefulWidget {
-  const UserInfoView({super.key});
+class CustomerInfoView extends StatefulWidget {
+  const CustomerInfoView({super.key});
 
   @override
-  State<UserInfoView> createState() => _UserInfoViewState();
+  State<CustomerInfoView> createState() => _CustomerInfoViewState();
 }
 
-class _UserInfoViewState extends State<UserInfoView> {
+class _CustomerInfoViewState extends State<CustomerInfoView> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   TextEditingController fNController = TextEditingController();
   TextEditingController lNController = TextEditingController();

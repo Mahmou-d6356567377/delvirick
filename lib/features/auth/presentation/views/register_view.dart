@@ -95,7 +95,7 @@ class _RegisterViewState extends State<RegisterView> {
                               : Color(0xffD1FAE5),
                       onPressed: () {
                         // Our Logic
-                        GoRouter.of(context).push(Routers.userInfo);
+                        GoRouter.of(context).push(Routers.customerInfo);
                       },
                       child: Text('Create Account'),
                     ),
@@ -134,7 +134,7 @@ class _RegisterViewState extends State<RegisterView> {
                         (index) => InkWell(
                           onTap: () {
                             // Our Logic
-                            GoRouter.of(context).push(Routers.userInfo);
+                            GoRouter.of(context).push(Routers.customerInfo);
                           },
                           child: Container(
                             width: 56,
