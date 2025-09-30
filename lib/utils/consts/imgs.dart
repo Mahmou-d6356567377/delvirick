@@ -7,5 +7,6 @@ class ConstImgs {
   static const String truck = "assets/imgs/Truck.svg";
   static const String shopping = "assets/imgs/shopping.svg";
   static const String storefront = "assets/imgs/Storefront.svg";
+  static const String pinloc = "assets/images/Pinloc.png";
 
 }

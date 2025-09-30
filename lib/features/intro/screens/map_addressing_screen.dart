@@ -1,4 +1,8 @@
-import 'package:delvirick/widgets/custom_button.dart';
+import 'package:delvirick/core/widgets/custom_text_field.dart';
+import 'package:delvirick/features/intro/screens/widgets/map_address_wdiget.dart';
+import 'package:delvirick/utils/consts/colors.dart';
+import 'package:delvirick/utils/consts/fonts.dart';
+
 import 'package:delvirick/widgets/map_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -51,22 +55,31 @@ class _MapAddressingScreenState extends State<MapAddressingScreen> {
             },
           ),
 
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20),
-            child: CustomButton(
-              onpress: () {
-                if (selectedLocation != null) {
-                } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("اختر موقعًا أولاً")),
-                  );
-                }
-              },
-              title:
-                  widget.isadmin
-                      ? 'الوصول الى العميل'
-                      : 'الوصول الى عنوان الطلب',
-            ),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 40.0,
+                  horizontal: 16.0,
+                ),
+                child: CustomTextField(
+                  hintstyle: ConstFonts.fontboldgreen.copyWith(
+                    color: ConstColors.lightgreen,
+                  ),
+                  controller: TextEditingController(
+                    text: selectedAddress ?? '',
+                  ),
+                  hintText: 'Find your location',
+
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Icon(Icons.search, color: ConstColors.primaryColor),
+                  ),
+                ),
+              ),
+              Spacer(),
+              MapAddressWidget(),
+            ],
           ),
         ],
       ),

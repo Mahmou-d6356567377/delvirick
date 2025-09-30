@@ -1,6 +1,10 @@
 import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/core/widgets/custom_text_field.dart';
+import 'package:delvirick/features/widgets/custom_back_button.dart';
+import 'package:delvirick/utils/routes/go_router.dart';
+import 'package:delvirick/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomerInfoView extends StatefulWidget {
   const CustomerInfoView({super.key});
@@ -16,6 +20,7 @@ class _CustomerInfoViewState extends State<CustomerInfoView> {
   TextEditingController phoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: Form(
@@ -23,7 +28,7 @@ class _CustomerInfoViewState extends State<CustomerInfoView> {
           child: Column(
             children: [
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.33,
+                height:  height * 0.33,
                 child: Stack(
                   children: [
                     Opacity(
@@ -35,26 +40,7 @@ class _CustomerInfoViewState extends State<CustomerInfoView> {
                       ),
                     ),
 
-                    Positioned(
-                      top: 65,
-                      left: 25,
-                      child: IconButton(
-                        style: IconButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 0,
-                            horizontal: 14,
-                          ),
-                          minimumSize: const Size(48, 48),
-                          backgroundColor: const Color(0xffF7F5ED),
-                          foregroundColor: const Color(0xffA97B3D),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        ),
-                        onPressed: () {},
-                        icon: Icon(Icons.arrow_back, size: 40),
-                      ),
-                    ),
+                    CustombackButton(),
 
                     Positioned(
                       top: 128,
@@ -103,19 +89,12 @@ class _CustomerInfoViewState extends State<CustomerInfoView> {
                       controller: phoneController,
                       hintText: 'Phone Number',
                     ),
-                    SizedBox(height: MediaQuery.of(context).size.height * 0.2),
-                    CustomElevatedButton(
-                      backgroundColor: Color(0xff10B981),
-                      onPressed: () {
-                        //Navigate to Location
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+                    CustomButton(
+                      onpress: () {
+                        GoRouter.of(context).push(Routers.setlocation);
                       },
-                      child: Text(
-                        'Next',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+                      title: 'Next',
                     ),
                   ],
                 ),

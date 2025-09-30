@@ -1,7 +1,8 @@
 import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/core/widgets/custom_text_field.dart';
-import 'package:delvirick/features/auth/presentation/widgets/top_section_auth_view.dart';
+import 'package:delvirick/features/widgets/top_app_background.dart';
 import 'package:delvirick/utils/routes/go_router.dart';
+import 'package:delvirick/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -43,13 +44,13 @@ class _RegisterViewState extends State<RegisterView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TopSectionAuthView(),
+            TopAppBackground(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35.0),
               child: Form(
                 key: formKey,
                 child: Column(
-                  spacing: 20,
+                  // spacing: 20,
                   children: [
                     Text(
                       'Create New Account',
@@ -88,16 +89,11 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                       ),
                     ),
-                    CustomElevatedButton(
-                      backgroundColor:
-                          emailController.text.isNotEmpty
-                              ? Color(0xff10B981)
-                              : Color(0xffD1FAE5),
-                      onPressed: () {
-                        // Our Logic
+                    CustomButton(
+                      onpress: () {
                         GoRouter.of(context).push(Routers.customerInfo);
                       },
-                      child: Text('Create Account'),
+                      title: 'Create Account',
                     ),
                     Row(
                       children: [
@@ -126,32 +122,35 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                       ],
                     ),
-                    Row(
-                      spacing: 32,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(
-                        3,
-                        (index) => InkWell(
-                          onTap: () {
-                            // Our Logic
-                            GoRouter.of(context).push(Routers.customerInfo);
-                          },
-                          child: Container(
-                            width: 56,
-                            height: 56,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(
-                                color: Color(0xFFE5E7EB),
-                                width: 1.5,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12.0),
+                      child: Row(
+                        spacing: 32,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(
+                          3,
+                          (index) => InkWell(
+                            onTap: () {
+                              // Our Logic
+                              GoRouter.of(context).push(Routers.customerInfo);
+                            },
+                            child: Container(
+                              width: 56,
+                              height: 56,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: Color(0xFFE5E7EB),
+                                  width: 1.5,
+                                ),
                               ),
-                            ),
-                            child: Center(
-                              child: Image.asset(
-                                'assets/images/${authMethodsIcon[index]}.png',
-                                width: 40,
-                                height: 40,
+                              child: Center(
+                                child: Image.asset(
+                                  'assets/images/${authMethodsIcon[index]}.png',
+                                  width: 40,
+                                  height: 40,
+                                ),
                               ),
                             ),
                           ),

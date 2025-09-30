@@ -1,6 +1,6 @@
 import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/core/widgets/custom_text_field.dart';
-import 'package:delvirick/features/auth/presentation/widgets/top_section_auth_view.dart';
+import 'package:delvirick/features/widgets/top_app_background.dart';
 import 'package:delvirick/utils/routes/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -44,7 +44,7 @@ class _LoginViewState extends State<LoginView> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TopSectionAuthView(),
+            TopAppBackground(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 35.0),
               child: Form(

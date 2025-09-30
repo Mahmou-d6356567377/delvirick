@@ -1,14 +1,17 @@
 import 'package:delvirick/features/auth/presentation/views/login_view.dart';
 import 'package:delvirick/features/auth/presentation/views/register_view.dart';
+import 'package:delvirick/features/auth/presentation/views/set_location.dart';
+import 'package:delvirick/features/intro/screens/map_addressing_screen.dart';
 import 'package:delvirick/features/userInfo/customerInfo/presentation/views/customer_info_view.dart';
 import 'package:delvirick/features/userInfo/customerInfo/presentation/widgets/congrate.dart';
+import 'package:delvirick/features/userInfo/customerInfo/presentation/widgets/vertification_code_view.dart';
 import 'package:delvirick/features/userInfo/driverInfo/presentation/views/driver_info_vehicle_view.dart';
 import 'package:delvirick/features/userInfo/driverInfo/presentation/views/driver_info_details_view.dart';
 import 'package:delvirick/features/userInfo/driverInfo/presentation/views/driver_info_image_view.dart.dart';
 import 'package:delvirick/features/userInfo/driverInfo/presentation/views/driver_info_passprot_view.dart';
 import 'package:delvirick/features/userInfo/driverInfo/presentation/views/driver_info_payment_view.dart';
-import 'package:delvirick/view/intro/screens/onboarding.dart';
-import 'package:delvirick/view/intro/screens/users.dart';
+import 'package:delvirick/features/intro/screens/onboarding.dart';
+import 'package:delvirick/features/intro/screens/users.dart';
 import 'package:go_router/go_router.dart';
 
 class Routers {
@@ -43,9 +46,10 @@ class Routers {
   static const String rulesscreen = '/rulesscreen';
   static const String aboutappscreen = '/aboutappscreen';
   static const String connectwithusscreen = '/connectwithusscreen';
+  static const String setlocation = '/setlocation';
 
   static final GoRouter route = GoRouter(
-    initialLocation: driverInfoVehicle,
+    initialLocation: onboardingscreen,
     routes: [
       GoRoute(
         path: onboardingscreen,
@@ -79,6 +83,9 @@ class Routers {
         builder: (context, state) => DriverInfoPaymentView(),
       ),
       GoRoute(path: congrate, builder: (context, state) => Congrate()),
+      GoRoute(path: setlocation, builder: (context, state) => SetLocation()),
+      GoRoute(path: mapaddressingscreen, builder: (context, state) => MapAddressingScreen(isadmin: true)),
+      GoRoute(path: otpscreen, builder: (context, state) => VertificationCodeView()),
     ],
   );
 }

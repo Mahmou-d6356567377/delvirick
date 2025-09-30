@@ -113,25 +113,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             SizedBox(height: hight * 0.05),
 
             // Next Button
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: SizedBox(
-                width: double.infinity,
-                height: 50,
-                child: CustomButton(
-                  onpress: () {
-                    if (_currentPage == onboardingData.length - 1) {
-                      GoRouter.of(context).push(Routers.userscreen);
-                    } else {
-                      _controller.nextPage(
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.easeIn,
-                      );
-                    }
-                  },
-                  title: "Next",
-                ),
-              ),
+            CustomButton(
+              onpress: () {
+                if (_currentPage == onboardingData.length - 1) {
+                  GoRouter.of(context).push(Routers.userscreen);
+                } else {
+                  _controller.nextPage(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeIn,
+                  );
+                }
+              },
+              title: "Next",
             ),
 
             SizedBox(height: hight * 0.1),

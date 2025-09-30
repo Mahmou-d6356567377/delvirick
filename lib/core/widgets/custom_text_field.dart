@@ -7,7 +7,7 @@ class CustomTextField extends StatelessWidget {
     this.prefixIcon,
     this.hintText,
     this.suffixIcon,
-    this.obscureText = false,
+    this.obscureText = false, this.hintstyle,
   });
 
   final TextEditingController controller;
@@ -15,10 +15,12 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final String? hintText;
   final bool? obscureText;
+  final TextStyle? hintstyle;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
@@ -40,7 +42,7 @@ class CustomTextField extends StatelessWidget {
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
           hintText: hintText,
-          hintStyle: TextStyle(
+          hintStyle: hintstyle?? TextStyle(
             color: Color(0xffCBCBCB),
             fontWeight: FontWeight.w500,
             fontSize: 20,

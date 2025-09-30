@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TopSectionAuthView extends StatelessWidget {
-  const TopSectionAuthView({super.key});
+class TopAppBackground extends StatelessWidget {
+  const TopAppBackground({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.445,
+      height: height * 0.38,
       child: Stack(
         children: [
           Image.asset(
@@ -50,7 +51,7 @@ class TopSectionAuthView extends StatelessWidget {
             child: Center(
               child: Image.asset(
                 'assets/images/image2.png',
-                height: MediaQuery.of(context).size.height * 0.445 - 90,
+                height: height * 0.26,
               ),
             ),
           ),
@@ -59,3 +60,4 @@ class TopSectionAuthView extends StatelessWidget {
     );
   }
 }
+//                height: MediaQuery.of(context).size.height * 0.445 - 90,

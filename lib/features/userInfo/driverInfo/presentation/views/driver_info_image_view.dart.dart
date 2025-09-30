@@ -186,12 +186,9 @@ class _DriverInfoImageViewState extends State<DriverInfoImageView> {
                             });
                           },
                           child: DottedBorder(
-                            options: RoundedRectDottedBorderOptions(
-                              color: Color(0xffD1FAE5),
-                              strokeWidth: 2,
-                              radius: Radius.circular(24),
-                              dashPattern: [4, 4],
-                            ),
+                            borderType: BorderType.RRect,
+                            radius: Radius.circular(24),           
+
                             child: Container(
                               width: double.infinity,
                               height: 215,
