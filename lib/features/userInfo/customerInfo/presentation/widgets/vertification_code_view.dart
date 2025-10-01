@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/features/auth/presentation/widgets/custom_otp_field.dart';
-import 'package:delvirick/utils/routes/go_router.dart';
+import 'package:delvirick/core/utils/routes/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

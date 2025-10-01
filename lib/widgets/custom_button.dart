@@ -1,5 +1,5 @@
-import 'package:delvirick/utils/consts/colors.dart';
-import 'package:delvirick/utils/consts/fonts.dart';
+import 'package:delvirick/core/utils/consts/colors.dart';
+import 'package:delvirick/core/utils/consts/fonts.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {

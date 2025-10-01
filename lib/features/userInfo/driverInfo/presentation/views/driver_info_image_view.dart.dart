@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/features/userInfo/driverInfo/presentation/widgets/custom_modal_bottom_sheet.dart';
-import 'package:delvirick/utils/routes/go_router.dart';
+import 'package:delvirick/core/utils/routes/go_router.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

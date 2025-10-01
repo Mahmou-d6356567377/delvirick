@@ -1,10 +1,10 @@
 import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/core/widgets/custom_text_field.dart';
 import 'package:delvirick/features/widgets/custom_back_button.dart';
-import 'package:delvirick/utils/consts/colors.dart';
-import 'package:delvirick/utils/consts/fonts.dart';
-import 'package:delvirick/utils/consts/imgs.dart';
-import 'package:delvirick/utils/routes/go_router.dart';
+import 'package:delvirick/core/utils/consts/colors.dart';
+import 'package:delvirick/core/utils/consts/fonts.dart';
+import 'package:delvirick/core/utils/consts/imgs.dart';
+import 'package:delvirick/core/utils/routes/go_router.dart';
 import 'package:delvirick/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

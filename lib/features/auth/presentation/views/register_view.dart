@@ -1,7 +1,7 @@
 import 'package:delvirick/core/widgets/custom_elevated_button.dart';
 import 'package:delvirick/core/widgets/custom_text_field.dart';
 import 'package:delvirick/features/widgets/top_app_background.dart';
-import 'package:delvirick/utils/routes/go_router.dart';
+import 'package:delvirick/core/utils/routes/go_router.dart';
 import 'package:delvirick/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -169,7 +169,7 @@ class _RegisterViewState extends State<RegisterView> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            GoRouter.of(context).pop();
+                            GoRouter.of(context).push(Routers.login);
                           },
                           child: Text(
                             'Log in',

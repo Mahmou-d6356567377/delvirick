@@ -1,5 +1,5 @@
-import 'package:delvirick/utils/consts/colors.dart';
-import 'package:delvirick/utils/consts/text.dart';
+import 'package:delvirick/core/utils/consts/colors.dart';
+import 'package:delvirick/core/utils/consts/text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

@@ -1,8 +1,8 @@
 import 'package:delvirick/features/widgets/top_app_background.dart';
-import 'package:delvirick/utils/consts/colors.dart';
-import 'package:delvirick/utils/consts/fonts.dart';
-import 'package:delvirick/utils/consts/imgs.dart';
-import 'package:delvirick/utils/routes/go_router.dart';
+import 'package:delvirick/core/utils/consts/colors.dart';
+import 'package:delvirick/core/utils/consts/fonts.dart';
+import 'package:delvirick/core/utils/consts/imgs.dart';
+import 'package:delvirick/core/utils/routes/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';

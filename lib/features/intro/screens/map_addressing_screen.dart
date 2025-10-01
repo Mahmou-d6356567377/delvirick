@@ -1,7 +1,7 @@
 import 'package:delvirick/core/widgets/custom_text_field.dart';
 import 'package:delvirick/features/intro/screens/widgets/map_address_wdiget.dart';
-import 'package:delvirick/utils/consts/colors.dart';
-import 'package:delvirick/utils/consts/fonts.dart';
+import 'package:delvirick/core/utils/consts/colors.dart';
+import 'package:delvirick/core/utils/consts/fonts.dart';
 
 import 'package:delvirick/widgets/map_widget.dart';
 import 'package:flutter/material.dart';
