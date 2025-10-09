@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 
 class TextedDevider extends StatelessWidget {
   const TextedDevider({
-    super.key,
+    super.key, required this.text,
   });
 
+ final String text;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,7 +20,7 @@ class TextedDevider extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12.0),
           child: Text(
-            'or Login with',
+            text,
             style: TextStyle(
               color: Colors.grey,
               fontWeight: FontWeight.w900,

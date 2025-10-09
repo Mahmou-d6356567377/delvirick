@@ -46,9 +46,7 @@ class _LoginViewState extends State<LoginView> {
   void _onLoginPressed() {
     if (formKey.currentState!.validate()) {
       context.read<AuthBloc>().add(
-            LoginRequested(
-              email: emailController.text,
-              password: passwordController.text,
+            LoginRequested( emailController.text.trim(),passwordController.text.trim(),
             ),
           );
     }
@@ -133,7 +131,7 @@ class _LoginViewState extends State<LoginView> {
                                 )
                               : const Text('Login'),
                         ),
-                        const TextedDevider(),
+                        const TextedDevider(text: 'or Login with'),
                         const SocialMediaSigning(),
                         const DontHaveAccount(),
                       ],

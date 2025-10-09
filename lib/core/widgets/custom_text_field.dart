@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({
+   CustomTextField({
     super.key,
     required this.controller,
     this.prefixIcon,
     this.hintText,
+    this.keyboardType,
     this.suffixIcon,
     this.obscureText = false, this.hintstyle,
   });
@@ -16,6 +17,7 @@ class CustomTextField extends StatelessWidget {
   final String? hintText;
   final bool? obscureText;
   final TextStyle? hintstyle;
+  TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +38,13 @@ class CustomTextField extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         obscureText: obscureText!,
+        keyboardType: keyboardType,
         decoration: InputDecoration(
           prefixIconConstraints: BoxConstraints(maxHeight: 50, maxWidth: 50),
           suffixIconConstraints: BoxConstraints(maxHeight: 50, maxWidth: 50),
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
+          
           hintText: hintText,
           hintStyle: hintstyle?? TextStyle(
             color: Color(0xffCBCBCB),
